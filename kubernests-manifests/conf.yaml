@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: db-credentials # Name of the 'Secret'
+data:
+  accesskey: mykey
+  secretkey: mysecret
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: minio-host  # name of ConfigMap
+data:
+  host: minio
