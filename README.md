@@ -1,1 +1,1 @@
-# kubernetes-todolist-project
+# kubernetes-note-project
