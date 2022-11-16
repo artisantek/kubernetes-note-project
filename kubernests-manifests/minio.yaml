@@ -56,10 +56,16 @@ spec:
             - server
             - /storage
           env:
-            - name: MINIO_ACCESS_KEY
-              value: mykey
-            - name: MINIO_SECRET_KEY
-              value: mysecret
+          - name: MINIO_ACCESS_KEY
+            valueFrom:
+              configMapKeyRef:
+                name: db-credentials # Secret Name
+                key: accesskey
+          - name: MINIO_SECRET_KEY
+            valueFrom:
+              configMapKeyRef:
+                name: db-credentials # Secret Name
+                key: secretkey          
           ports:
             - containerPort: 9000
           volumeMounts:
