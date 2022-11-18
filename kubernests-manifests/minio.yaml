@@ -10,6 +10,7 @@ spec:
   storageClassName: ssd
   accessModes:
     - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Delete
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
