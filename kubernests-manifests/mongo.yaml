@@ -10,6 +10,7 @@ spec:
   storageClassName: db
   accessModes:
     - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Delete
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
